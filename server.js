@@ -8,7 +8,6 @@ app.use(bodyparser.json());
 app.use(express.urlencoded({extended:false}));
 app.use(express.static('views'));
 app.use(express.static('assets'));
-//app.use(express.static)
 
 app.get('/login',(req,res)=>{
     res.sendFile(path.join(__dirname,'/views/login.html'))
@@ -32,3 +31,4 @@ app.use('/',admin)
 app.listen(3000,()=>{
     console.log('listening to server 3000');
 })
+
